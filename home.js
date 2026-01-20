@@ -167,6 +167,7 @@ const bonus = getvalue("bonus-code");
     date:new Date().toLocaleString()
 }
 transactiondata.push(data);
+ alert("🎉 Bonus added successfully!");
 
 })
 
@@ -256,3 +257,9 @@ document.getElementById("transactions-btn").addEventListener('click', function()
         transactionContainer.appendChild(div);
     }
 });
+
+// log out feature
+document.getElementById("log-out-btn").addEventListener('click',function(e){
+e.preventDefault();
+window.location.href="index.html";
+})

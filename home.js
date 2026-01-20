@@ -179,12 +179,12 @@ document.getElementById("pay-btn").addEventListener('click',function(e){
 const bank =getvalue("bank");
 const account =getvalue("accounter-number");
 const amount = getvalueNumber("pay-amount");
-if(amount <=0){
+const pin =getvalueNumber("pay-pin");
+const availableBalance =getinnerText('available-balance');
+if(amount <=0 || amount>availableBalance){
     alert("Invalid amount");
     return;
 }
-const pin =getvalueNumber("pay-pin");
-const availableBalance =getinnerText('available-balance');
 
 if(account.length<11){
     alert("provide a valid account number");
